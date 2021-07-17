@@ -1,0 +1,4 @@
+PICHON
+justcolor picker
+taglib sharp
+Naudio
