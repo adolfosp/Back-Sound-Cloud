@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using Bunifu.UI.WinForms;
 using NAudio.Wave;
 using NAudio.WaveFormRenderer;
-using SoundCloud.Error;
 
 namespace SoundCloud
 {
@@ -95,14 +94,14 @@ namespace SoundCloud
             myRendererSettings.TopHeight = pnWaveForm.Height / 2;
             myRendererSettings.BottomHeight = pnWaveForm.Height / 2;
             myRendererSettings.TopPeakPen = new Pen(Color.FromArgb(89, 89, 96));
-            myRendererSettings.BottomPeakPen = new Pen(Color.FromArgb(149, 149, 161));
+            myRendererSettings.BottomPeakPen = new Pen(Color.FromArgb(0, 0, 0));
             myRendererSettings.BackgroundColor = Color.FromName("ControlLight");
 
             var myRendererSettings2 = new StandardWaveFormRendererSettings();
             myRendererSettings2.Width = pnWaveForm.Width;
             myRendererSettings2.TopHeight = pnWaveForm.Height / 2;
             myRendererSettings2.BottomHeight = pnWaveForm.Height / 2;
-            myRendererSettings2.TopPeakPen = new Pen(Color.FromArgb(0, 0, 0));
+            myRendererSettings2.TopPeakPen = new Pen(Color.FromArgb(255, 255, 255));
             myRendererSettings2.BottomPeakPen = new Pen(Color.FromArgb(149, 149, 161));
             myRendererSettings2.BackgroundColor = Color.FromName("ControlLight");
 
@@ -310,21 +309,10 @@ namespace SoundCloud
 
         private void bunifuHSlider1_Scroll(object sender, Utilities.BunifuSlider.BunifuHScrollBar.ScrollEventArgs e)
         {
-            try
+            if(vol.Value != 0)
             {
-                if (vol.Value != 0)
-                {
-                    audioFileReader.Volume = wavePlayer.Volume = (vol.Value - 1) / 100f;
-                }
+                audioFileReader.Volume = wavePlayer.Volume = (vol.Value - 1) / 100f;
             }
-            catch(Exception ex)
-            {
-                var telaErro = new Base("Não é possível alterar o volume sem música");
-                telaErro.Show();
-              
-
-            }
-          
         }
 
 

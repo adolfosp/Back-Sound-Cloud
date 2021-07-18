@@ -30,7 +30,6 @@ namespace SoundCloud
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -42,7 +41,6 @@ namespace SoundCloud
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.pnHeader = new System.Windows.Forms.Panel();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtBusca = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnMin = new Bunifu.UI.WinForms.BunifuShapes();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -74,8 +72,7 @@ namespace SoundCloud
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
-            this.bunifuToolTip2 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
+            this.PlayPause = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -131,7 +128,6 @@ namespace SoundCloud
             // 
             // pnHeader
             // 
-            this.pnHeader.Controls.Add(this.bunifuButton1);
             this.pnHeader.Controls.Add(this.txtBusca);
             this.pnHeader.Controls.Add(this.btnMin);
             this.pnHeader.Controls.Add(this.pictureBox1);
@@ -141,107 +137,9 @@ namespace SoundCloud
             this.pnHeader.Name = "pnHeader";
             this.pnHeader.Size = new System.Drawing.Size(953, 71);
             this.pnHeader.TabIndex = 2;
-            this.bunifuToolTip2.SetToolTip(this.pnHeader, "");
-            this.bunifuToolTip1.SetToolTip(this.pnHeader, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.pnHeader, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.pnHeader, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.pnHeader, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.pnHeader, "");
-            // 
-            // bunifuButton1
-            // 
-            this.bunifuButton1.AllowAnimations = true;
-            this.bunifuButton1.AllowMouseEffects = true;
-            this.bunifuButton1.AllowToggling = false;
-            this.bunifuButton1.AnimationSpeed = 200;
-            this.bunifuButton1.AutoGenerateColors = false;
-            this.bunifuButton1.AutoRoundBorders = false;
-            this.bunifuButton1.AutoSizeLeftIcon = true;
-            this.bunifuButton1.AutoSizeRightIcon = true;
-            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackColor1 = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
-            this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.ButtonText = "Upload nova Playlist";
-            this.bunifuButton1.ButtonTextMarginLeft = 0;
-            this.bunifuButton1.ColorContrastOnClick = 45;
-            this.bunifuButton1.ColorContrastOnHover = 45;
-            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges1;
-            this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton1.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.bunifuButton1.IconMarginLeft = 11;
-            this.bunifuButton1.IconPadding = 10;
-            this.bunifuButton1.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.bunifuButton1.IconSize = 25;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.Black;
-            this.bunifuButton1.IdleBorderRadius = 15;
-            this.bunifuButton1.IdleBorderThickness = 1;
-            this.bunifuButton1.IdleFillColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuButton1.IdleIconLeftImage = null;
-            this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(417, 12);
-            this.bunifuButton1.Name = "bunifuButton1";
-            this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton1.OnDisabledState.BorderRadius = 15;
-            this.bunifuButton1.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.OnDisabledState.BorderThickness = 1;
-            this.bunifuButton1.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton1.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton1.OnDisabledState.IconLeftImage = null;
-            this.bunifuButton1.OnDisabledState.IconRightImage = null;
-            this.bunifuButton1.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuButton1.onHoverState.BorderRadius = 15;
-            this.bunifuButton1.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.onHoverState.BorderThickness = 1;
-            this.bunifuButton1.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuButton1.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.onHoverState.IconLeftImage = null;
-            this.bunifuButton1.onHoverState.IconRightImage = null;
-            this.bunifuButton1.OnIdleState.BorderColor = System.Drawing.Color.Black;
-            this.bunifuButton1.OnIdleState.BorderRadius = 15;
-            this.bunifuButton1.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.OnIdleState.BorderThickness = 1;
-            this.bunifuButton1.OnIdleState.FillColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuButton1.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.OnIdleState.IconLeftImage = null;
-            this.bunifuButton1.OnIdleState.IconRightImage = null;
-            this.bunifuButton1.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuButton1.OnPressedState.BorderRadius = 15;
-            this.bunifuButton1.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.OnPressedState.BorderThickness = 1;
-            this.bunifuButton1.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuButton1.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.OnPressedState.IconLeftImage = null;
-            this.bunifuButton1.OnPressedState.IconRightImage = null;
-            this.bunifuButton1.Size = new System.Drawing.Size(150, 50);
-            this.bunifuButton1.TabIndex = 2;
-            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bunifuButton1.TextMarginLeft = 0;
-            this.bunifuButton1.TextPadding = new System.Windows.Forms.Padding(0);
-            this.bunifuToolTip1.SetToolTip(this.bunifuButton1, "");
-            this.bunifuToolTip2.SetToolTip(this.bunifuButton1, "");
-            this.bunifuToolTip2.SetToolTipIcon(this.bunifuButton1, null);
-            this.bunifuToolTip1.SetToolTipIcon(this.bunifuButton1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuButton1, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.bunifuButton1, "");
-            this.bunifuButton1.UseDefaultRadiusAndThickness = true;
+            this.PlayPause.SetToolTip(this.pnHeader, "");
+            this.PlayPause.SetToolTipIcon(this.pnHeader, null);
+            this.PlayPause.SetToolTipTitle(this.pnHeader, "");
             // 
             // txtBusca
             // 
@@ -314,12 +212,9 @@ namespace SoundCloud
             this.txtBusca.TextMarginLeft = 3;
             this.txtBusca.TextMarginTop = 0;
             this.txtBusca.TextPlaceholder = "Digite o nome da música...";
-            this.bunifuToolTip1.SetToolTip(this.txtBusca, "");
-            this.bunifuToolTip2.SetToolTip(this.txtBusca, "");
-            this.bunifuToolTip2.SetToolTipIcon(this.txtBusca, null);
-            this.bunifuToolTip1.SetToolTipIcon(this.txtBusca, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.txtBusca, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.txtBusca, "");
+            this.PlayPause.SetToolTip(this.txtBusca, "");
+            this.PlayPause.SetToolTipIcon(this.txtBusca, null);
+            this.PlayPause.SetToolTipTitle(this.txtBusca, "");
             this.txtBusca.UseSystemPasswordChar = false;
             this.txtBusca.WordWrap = true;
             this.txtBusca.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBusca_KeyUp);
@@ -342,12 +237,9 @@ namespace SoundCloud
             this.btnMin.Size = new System.Drawing.Size(18, 10);
             this.btnMin.TabIndex = 1;
             this.btnMin.Text = "bunifuShapes1";
-            this.bunifuToolTip1.SetToolTip(this.btnMin, "");
-            this.bunifuToolTip2.SetToolTip(this.btnMin, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnMin, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.btnMin, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnMin, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.btnMin, "");
+            this.PlayPause.SetToolTip(this.btnMin, "");
+            this.PlayPause.SetToolTipIcon(this.btnMin, null);
+            this.PlayPause.SetToolTipTitle(this.btnMin, "");
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // pictureBox1
@@ -359,12 +251,9 @@ namespace SoundCloud
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.bunifuToolTip2.SetToolTip(this.pictureBox1, "");
-            this.bunifuToolTip1.SetToolTip(this.pictureBox1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.pictureBox1, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.pictureBox1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.pictureBox1, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.pictureBox1, "");
+            this.PlayPause.SetToolTip(this.pictureBox1, "");
+            this.PlayPause.SetToolTipIcon(this.pictureBox1, null);
+            this.PlayPause.SetToolTipTitle(this.pictureBox1, "");
             // 
             // btnFechar
             // 
@@ -378,12 +267,9 @@ namespace SoundCloud
             this.btnFechar.Size = new System.Drawing.Size(20, 23);
             this.btnFechar.TabIndex = 0;
             this.btnFechar.Text = "❌ ";
-            this.bunifuToolTip1.SetToolTip(this.btnFechar, "");
-            this.bunifuToolTip2.SetToolTip(this.btnFechar, "");
-            this.bunifuToolTip2.SetToolTipIcon(this.btnFechar, null);
-            this.bunifuToolTip1.SetToolTipIcon(this.btnFechar, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnFechar, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.btnFechar, "");
+            this.PlayPause.SetToolTip(this.btnFechar, "");
+            this.PlayPause.SetToolTipIcon(this.btnFechar, null);
+            this.PlayPause.SetToolTipTitle(this.btnFechar, "");
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // panel1
@@ -408,12 +294,9 @@ namespace SoundCloud
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(953, 216);
             this.panel1.TabIndex = 3;
-            this.bunifuToolTip2.SetToolTip(this.panel1, "");
-            this.bunifuToolTip1.SetToolTip(this.panel1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.panel1, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.panel1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.panel1, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.panel1, "");
+            this.PlayPause.SetToolTip(this.panel1, "");
+            this.PlayPause.SetToolTipIcon(this.panel1, null);
+            this.PlayPause.SetToolTipTitle(this.panel1, "");
             // 
             // vol
             // 
@@ -454,53 +337,44 @@ namespace SoundCloud
             this.vol.SliderThumbStyle = Utilities.BunifuSlider.BunifuHScrollBar.SliderThumbStyles.Circular;
             this.vol.SmallChange = 1;
             this.vol.TabIndex = 11;
-            this.vol.ThumbColor = System.Drawing.Color.DodgerBlue;
-            this.vol.ThumbFillColor = System.Drawing.SystemColors.Control;
+            this.vol.ThumbColor = System.Drawing.Color.Black;
+            this.vol.ThumbFillColor = System.Drawing.SystemColors.ControlDark;
             this.vol.ThumbLength = 19;
             this.vol.ThumbMargin = 1;
             this.vol.ThumbSize = Bunifu.UI.WinForms.BunifuHSlider.ThumbSizes.Medium;
             this.vol.ThumbStyle = Bunifu.UI.WinForms.BunifuHSlider.ThumbStyles.Outline;
-            this.bunifuToolTip1.SetToolTip(this.vol, "");
-            this.bunifuToolTip2.SetToolTip(this.vol, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.vol, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.vol, null);
-            this.bunifuToolTip2.SetToolTipTitle(this.vol, "");
-            this.bunifuToolTip1.SetToolTipTitle(this.vol, "");
+            this.PlayPause.SetToolTip(this.vol, "");
+            this.PlayPause.SetToolTipIcon(this.vol, null);
+            this.PlayPause.SetToolTipTitle(this.vol, "");
             this.vol.Value = 50;
             this.vol.Scroll += new System.EventHandler<Utilities.BunifuSlider.BunifuHScrollBar.ScrollEventArgs>(this.bunifuHSlider1_Scroll);
             // 
             // iconPause
             // 
             this.iconPause.Image = ((System.Drawing.Image)(resources.GetObject("iconPause.Image")));
-            this.iconPause.Location = new System.Drawing.Point(588, 27);
+            this.iconPause.Location = new System.Drawing.Point(897, 6);
             this.iconPause.Name = "iconPause";
             this.iconPause.Size = new System.Drawing.Size(40, 50);
             this.iconPause.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPause.TabIndex = 10;
             this.iconPause.TabStop = false;
-            this.bunifuToolTip2.SetToolTip(this.iconPause, "");
-            this.bunifuToolTip1.SetToolTip(this.iconPause, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.iconPause, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.iconPause, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.iconPause, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.iconPause, "");
+            this.PlayPause.SetToolTip(this.iconPause, "");
+            this.PlayPause.SetToolTipIcon(this.iconPause, null);
+            this.PlayPause.SetToolTipTitle(this.iconPause, "");
             this.iconPause.Visible = false;
             // 
             // iconPlay
             // 
             this.iconPlay.Image = ((System.Drawing.Image)(resources.GetObject("iconPlay.Image")));
-            this.iconPlay.Location = new System.Drawing.Point(542, 27);
+            this.iconPlay.Location = new System.Drawing.Point(851, 6);
             this.iconPlay.Name = "iconPlay";
             this.iconPlay.Size = new System.Drawing.Size(40, 50);
             this.iconPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPlay.TabIndex = 1;
             this.iconPlay.TabStop = false;
-            this.bunifuToolTip2.SetToolTip(this.iconPlay, "");
-            this.bunifuToolTip1.SetToolTip(this.iconPlay, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.iconPlay, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.iconPlay, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.iconPlay, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.iconPlay, "");
+            this.PlayPause.SetToolTip(this.iconPlay, "");
+            this.PlayPause.SetToolTipIcon(this.iconPlay, null);
+            this.PlayPause.SetToolTipTitle(this.iconPlay, "");
             this.iconPlay.Visible = false;
             // 
             // btnPlaylist
@@ -520,25 +394,22 @@ namespace SoundCloud
             this.btnPlaylist.ImageActive = null;
             this.btnPlaylist.ImageLocation = null;
             this.btnPlaylist.ImageMargin = 10;
-            this.btnPlaylist.ImageSize = new System.Drawing.Size(30, 26);
-            this.btnPlaylist.ImageZoomSize = new System.Drawing.Size(40, 36);
+            this.btnPlaylist.ImageSize = new System.Drawing.Size(30, 27);
+            this.btnPlaylist.ImageZoomSize = new System.Drawing.Size(40, 37);
             this.btnPlaylist.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnPlaylist.InitialImage")));
-            this.btnPlaylist.Location = new System.Drawing.Point(404, 177);
+            this.btnPlaylist.Location = new System.Drawing.Point(421, 179);
             this.btnPlaylist.Name = "btnPlaylist";
             this.btnPlaylist.Rotation = 0;
             this.btnPlaylist.ShowActiveImage = true;
             this.btnPlaylist.ShowCursorChanges = true;
             this.btnPlaylist.ShowImageBorders = true;
             this.btnPlaylist.ShowSizeMarkers = false;
-            this.btnPlaylist.Size = new System.Drawing.Size(40, 36);
+            this.btnPlaylist.Size = new System.Drawing.Size(40, 37);
             this.btnPlaylist.TabIndex = 9;
-            this.bunifuToolTip1.SetToolTip(this.btnPlaylist, "");
-            this.bunifuToolTip2.SetToolTip(this.btnPlaylist, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnPlaylist, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.btnPlaylist, null);
+            this.PlayPause.SetToolTip(this.btnPlaylist, "");
+            this.PlayPause.SetToolTipIcon(this.btnPlaylist, null);
             this.btnPlaylist.ToolTipText = "";
-            this.bunifuToolTip2.SetToolTipTitle(this.btnPlaylist, "");
-            this.bunifuToolTip1.SetToolTipTitle(this.btnPlaylist, "");
+            this.PlayPause.SetToolTipTitle(this.btnPlaylist, "");
             this.btnPlaylist.WaitOnLoad = false;
             this.btnPlaylist.Zoom = 10;
             this.btnPlaylist.ZoomSpeed = 10;
@@ -561,25 +432,22 @@ namespace SoundCloud
             this.btnReplay.ImageActive = null;
             this.btnReplay.ImageLocation = null;
             this.btnReplay.ImageMargin = 10;
-            this.btnReplay.ImageSize = new System.Drawing.Size(30, 26);
-            this.btnReplay.ImageZoomSize = new System.Drawing.Size(40, 36);
+            this.btnReplay.ImageSize = new System.Drawing.Size(30, 27);
+            this.btnReplay.ImageZoomSize = new System.Drawing.Size(40, 37);
             this.btnReplay.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnReplay.InitialImage")));
-            this.btnReplay.Location = new System.Drawing.Point(450, 177);
+            this.btnReplay.Location = new System.Drawing.Point(467, 179);
             this.btnReplay.Name = "btnReplay";
             this.btnReplay.Rotation = 0;
             this.btnReplay.ShowActiveImage = true;
             this.btnReplay.ShowCursorChanges = true;
             this.btnReplay.ShowImageBorders = true;
             this.btnReplay.ShowSizeMarkers = false;
-            this.btnReplay.Size = new System.Drawing.Size(40, 36);
+            this.btnReplay.Size = new System.Drawing.Size(40, 37);
             this.btnReplay.TabIndex = 8;
-            this.bunifuToolTip1.SetToolTip(this.btnReplay, "");
-            this.bunifuToolTip2.SetToolTip(this.btnReplay, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnReplay, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.btnReplay, null);
+            this.PlayPause.SetToolTip(this.btnReplay, "");
+            this.PlayPause.SetToolTipIcon(this.btnReplay, null);
             this.btnReplay.ToolTipText = "";
-            this.bunifuToolTip2.SetToolTipTitle(this.btnReplay, "");
-            this.bunifuToolTip1.SetToolTipTitle(this.btnReplay, "");
+            this.PlayPause.SetToolTipTitle(this.btnReplay, "");
             this.btnReplay.WaitOnLoad = false;
             this.btnReplay.Zoom = 10;
             this.btnReplay.ZoomSpeed = 10;
@@ -602,25 +470,22 @@ namespace SoundCloud
             this.btnStop.ImageActive = null;
             this.btnStop.ImageLocation = null;
             this.btnStop.ImageMargin = 10;
-            this.btnStop.ImageSize = new System.Drawing.Size(30, 26);
-            this.btnStop.ImageZoomSize = new System.Drawing.Size(40, 36);
+            this.btnStop.ImageSize = new System.Drawing.Size(30, 27);
+            this.btnStop.ImageZoomSize = new System.Drawing.Size(40, 37);
             this.btnStop.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnStop.InitialImage")));
-            this.btnStop.Location = new System.Drawing.Point(634, 177);
+            this.btnStop.Location = new System.Drawing.Point(650, 179);
             this.btnStop.Name = "btnStop";
             this.btnStop.Rotation = 0;
             this.btnStop.ShowActiveImage = true;
             this.btnStop.ShowCursorChanges = true;
             this.btnStop.ShowImageBorders = true;
             this.btnStop.ShowSizeMarkers = false;
-            this.btnStop.Size = new System.Drawing.Size(40, 36);
+            this.btnStop.Size = new System.Drawing.Size(40, 37);
             this.btnStop.TabIndex = 7;
-            this.bunifuToolTip1.SetToolTip(this.btnStop, "Parar");
-            this.bunifuToolTip2.SetToolTip(this.btnStop, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnStop, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.btnStop, null);
+            this.PlayPause.SetToolTip(this.btnStop, "");
+            this.PlayPause.SetToolTipIcon(this.btnStop, null);
             this.btnStop.ToolTipText = "";
-            this.bunifuToolTip2.SetToolTipTitle(this.btnStop, "");
-            this.bunifuToolTip1.SetToolTipTitle(this.btnStop, "");
+            this.PlayPause.SetToolTipTitle(this.btnStop, "");
             this.btnStop.WaitOnLoad = false;
             this.btnStop.Zoom = 10;
             this.btnStop.ZoomSpeed = 10;
@@ -643,25 +508,22 @@ namespace SoundCloud
             this.btnPrev.ImageActive = null;
             this.btnPrev.ImageLocation = null;
             this.btnPrev.ImageMargin = 10;
-            this.btnPrev.ImageSize = new System.Drawing.Size(30, 26);
-            this.btnPrev.ImageZoomSize = new System.Drawing.Size(40, 36);
+            this.btnPrev.ImageSize = new System.Drawing.Size(30, 27);
+            this.btnPrev.ImageZoomSize = new System.Drawing.Size(40, 37);
             this.btnPrev.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnPrev.InitialImage")));
-            this.btnPrev.Location = new System.Drawing.Point(496, 177);
+            this.btnPrev.Location = new System.Drawing.Point(513, 179);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Rotation = 0;
             this.btnPrev.ShowActiveImage = true;
             this.btnPrev.ShowCursorChanges = true;
             this.btnPrev.ShowImageBorders = true;
             this.btnPrev.ShowSizeMarkers = false;
-            this.btnPrev.Size = new System.Drawing.Size(40, 36);
+            this.btnPrev.Size = new System.Drawing.Size(40, 37);
             this.btnPrev.TabIndex = 6;
-            this.bunifuToolTip1.SetToolTip(this.btnPrev, "");
-            this.bunifuToolTip2.SetToolTip(this.btnPrev, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnPrev, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.btnPrev, null);
+            this.PlayPause.SetToolTip(this.btnPrev, "");
+            this.PlayPause.SetToolTipIcon(this.btnPrev, null);
             this.btnPrev.ToolTipText = "";
-            this.bunifuToolTip2.SetToolTipTitle(this.btnPrev, "");
-            this.bunifuToolTip1.SetToolTipTitle(this.btnPrev, "");
+            this.PlayPause.SetToolTipTitle(this.btnPrev, "");
             this.btnPrev.WaitOnLoad = false;
             this.btnPrev.Zoom = 10;
             this.btnPrev.ZoomSpeed = 10;
@@ -684,25 +546,22 @@ namespace SoundCloud
             this.btnNext.ImageActive = null;
             this.btnNext.ImageLocation = null;
             this.btnNext.ImageMargin = 10;
-            this.btnNext.ImageSize = new System.Drawing.Size(30, 26);
-            this.btnNext.ImageZoomSize = new System.Drawing.Size(40, 36);
+            this.btnNext.ImageSize = new System.Drawing.Size(30, 27);
+            this.btnNext.ImageZoomSize = new System.Drawing.Size(40, 37);
             this.btnNext.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnNext.InitialImage")));
-            this.btnNext.Location = new System.Drawing.Point(588, 177);
+            this.btnNext.Location = new System.Drawing.Point(604, 179);
             this.btnNext.Name = "btnNext";
             this.btnNext.Rotation = 0;
             this.btnNext.ShowActiveImage = true;
             this.btnNext.ShowCursorChanges = true;
             this.btnNext.ShowImageBorders = true;
             this.btnNext.ShowSizeMarkers = false;
-            this.btnNext.Size = new System.Drawing.Size(40, 36);
+            this.btnNext.Size = new System.Drawing.Size(40, 37);
             this.btnNext.TabIndex = 5;
-            this.bunifuToolTip1.SetToolTip(this.btnNext, "");
-            this.bunifuToolTip2.SetToolTip(this.btnNext, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnNext, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.btnNext, null);
+            this.PlayPause.SetToolTip(this.btnNext, "");
+            this.PlayPause.SetToolTipIcon(this.btnNext, null);
             this.btnNext.ToolTipText = "";
-            this.bunifuToolTip2.SetToolTipTitle(this.btnNext, "");
-            this.bunifuToolTip1.SetToolTipTitle(this.btnNext, "");
+            this.PlayPause.SetToolTipTitle(this.btnNext, "");
             this.btnNext.WaitOnLoad = false;
             this.btnNext.Zoom = 10;
             this.btnNext.ZoomSpeed = 10;
@@ -725,25 +584,22 @@ namespace SoundCloud
             this.btnPlayPause.ImageActive = null;
             this.btnPlayPause.ImageLocation = null;
             this.btnPlayPause.ImageMargin = 10;
-            this.btnPlayPause.ImageSize = new System.Drawing.Size(30, 26);
-            this.btnPlayPause.ImageZoomSize = new System.Drawing.Size(40, 36);
+            this.btnPlayPause.ImageSize = new System.Drawing.Size(29, 28);
+            this.btnPlayPause.ImageZoomSize = new System.Drawing.Size(39, 38);
             this.btnPlayPause.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnPlayPause.InitialImage")));
-            this.btnPlayPause.Location = new System.Drawing.Point(542, 177);
+            this.btnPlayPause.Location = new System.Drawing.Point(559, 179);
             this.btnPlayPause.Name = "btnPlayPause";
             this.btnPlayPause.Rotation = 0;
             this.btnPlayPause.ShowActiveImage = true;
             this.btnPlayPause.ShowCursorChanges = true;
             this.btnPlayPause.ShowImageBorders = true;
             this.btnPlayPause.ShowSizeMarkers = false;
-            this.btnPlayPause.Size = new System.Drawing.Size(40, 36);
+            this.btnPlayPause.Size = new System.Drawing.Size(39, 38);
             this.btnPlayPause.TabIndex = 1;
-            this.bunifuToolTip1.SetToolTip(this.btnPlayPause, "");
-            this.bunifuToolTip2.SetToolTip(this.btnPlayPause, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnPlayPause, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.btnPlayPause, null);
+            this.PlayPause.SetToolTip(this.btnPlayPause, "Tocar\r\n");
+            this.PlayPause.SetToolTipIcon(this.btnPlayPause, null);
             this.btnPlayPause.ToolTipText = "";
-            this.bunifuToolTip2.SetToolTipTitle(this.btnPlayPause, "");
-            this.bunifuToolTip1.SetToolTipTitle(this.btnPlayPause, "");
+            this.PlayPause.SetToolTipTitle(this.btnPlayPause, "");
             this.btnPlayPause.WaitOnLoad = false;
             this.btnPlayPause.Zoom = 10;
             this.btnPlayPause.ZoomSpeed = 10;
@@ -751,6 +607,7 @@ namespace SoundCloud
             // 
             // pnWaveForm
             // 
+            this.pnWaveForm.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnWaveForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnWaveForm.Controls.Add(this.picWv);
             this.pnWaveForm.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -758,12 +615,9 @@ namespace SoundCloud
             this.pnWaveForm.Name = "pnWaveForm";
             this.pnWaveForm.Size = new System.Drawing.Size(696, 96);
             this.pnWaveForm.TabIndex = 4;
-            this.bunifuToolTip2.SetToolTip(this.pnWaveForm, "");
-            this.bunifuToolTip1.SetToolTip(this.pnWaveForm, "Um clique: avança \r\nDois cliques: retrocede");
-            this.bunifuToolTip1.SetToolTipIcon(this.pnWaveForm, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.pnWaveForm, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.pnWaveForm, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.pnWaveForm, "");
+            this.PlayPause.SetToolTip(this.pnWaveForm, "");
+            this.PlayPause.SetToolTipIcon(this.pnWaveForm, null);
+            this.PlayPause.SetToolTipTitle(this.pnWaveForm, "");
             this.pnWaveForm.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnWaveForm_MouseUp);
             // 
             // picWv
@@ -773,43 +627,36 @@ namespace SoundCloud
             this.picWv.Size = new System.Drawing.Size(10, 96);
             this.picWv.TabIndex = 0;
             this.picWv.TabStop = false;
-            this.bunifuToolTip2.SetToolTip(this.picWv, "");
-            this.bunifuToolTip1.SetToolTip(this.picWv, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.picWv, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.picWv, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.picWv, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.picWv, "");
+            this.PlayPause.SetToolTip(this.picWv, "");
+            this.PlayPause.SetToolTipIcon(this.picWv, null);
+            this.PlayPause.SetToolTipTitle(this.picWv, "");
             this.picWv.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picWv_MouseUp);
             // 
             // lblArtista
             // 
             this.lblArtista.AutoSize = true;
-            this.lblArtista.Location = new System.Drawing.Point(352, 64);
+            this.lblArtista.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArtista.Location = new System.Drawing.Point(351, 58);
             this.lblArtista.Name = "lblArtista";
-            this.lblArtista.Size = new System.Drawing.Size(36, 13);
+            this.lblArtista.Size = new System.Drawing.Size(57, 19);
             this.lblArtista.TabIndex = 3;
             this.lblArtista.Text = "Artista";
-            this.bunifuToolTip1.SetToolTip(this.lblArtista, "");
-            this.bunifuToolTip2.SetToolTip(this.lblArtista, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.lblArtista, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.lblArtista, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.lblArtista, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.lblArtista, "");
+            this.PlayPause.SetToolTip(this.lblArtista, "");
+            this.PlayPause.SetToolTipIcon(this.lblArtista, null);
+            this.PlayPause.SetToolTipTitle(this.lblArtista, "");
             // 
             // lblMusica
             // 
             this.lblMusica.AutoSize = true;
-            this.lblMusica.Location = new System.Drawing.Point(352, 42);
+            this.lblMusica.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMusica.Location = new System.Drawing.Point(351, 27);
             this.lblMusica.Name = "lblMusica";
-            this.lblMusica.Size = new System.Drawing.Size(157, 13);
+            this.lblMusica.Size = new System.Drawing.Size(288, 23);
             this.lblMusica.TabIndex = 2;
             this.lblMusica.Text = "Player inspirado no SoundCloud";
-            this.bunifuToolTip1.SetToolTip(this.lblMusica, "");
-            this.bunifuToolTip2.SetToolTip(this.lblMusica, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.lblMusica, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.lblMusica, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.lblMusica, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.lblMusica, "");
+            this.PlayPause.SetToolTip(this.lblMusica, "");
+            this.PlayPause.SetToolTipIcon(this.lblMusica, null);
+            this.PlayPause.SetToolTipTitle(this.lblMusica, "");
             // 
             // pictureBox3
             // 
@@ -820,12 +667,9 @@ namespace SoundCloud
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
-            this.bunifuToolTip2.SetToolTip(this.pictureBox3, "");
-            this.bunifuToolTip1.SetToolTip(this.pictureBox3, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.pictureBox3, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.pictureBox3, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.pictureBox3, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.pictureBox3, "");
+            this.PlayPause.SetToolTip(this.pictureBox3, "");
+            this.PlayPause.SetToolTipIcon(this.pictureBox3, null);
+            this.PlayPause.SetToolTipTitle(this.pictureBox3, "");
             // 
             // bunifuShadowPanel1
             // 
@@ -848,43 +692,35 @@ namespace SoundCloud
             this.bunifuShadowPanel1.Size = new System.Drawing.Size(217, 165);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 0;
-            this.bunifuToolTip2.SetToolTip(this.bunifuShadowPanel1, "");
-            this.bunifuToolTip1.SetToolTip(this.bunifuShadowPanel1, "");
-            this.bunifuToolTip2.SetToolTipIcon(this.bunifuShadowPanel1, null);
-            this.bunifuToolTip1.SetToolTipIcon(this.bunifuShadowPanel1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuShadowPanel1, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.bunifuShadowPanel1, "");
+            this.PlayPause.SetToolTip(this.bunifuShadowPanel1, "");
+            this.PlayPause.SetToolTipIcon(this.bunifuShadowPanel1, null);
+            this.PlayPause.SetToolTipTitle(this.bunifuShadowPanel1, "");
             // 
             // picPlay
             // 
             this.picPlay.Image = ((System.Drawing.Image)(resources.GetObject("picPlay.Image")));
-            this.picPlay.Location = new System.Drawing.Point(17, 15);
+            this.picPlay.Location = new System.Drawing.Point(15, 15);
             this.picPlay.Name = "picPlay";
             this.picPlay.Size = new System.Drawing.Size(185, 137);
-            this.picPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPlay.TabIndex = 0;
             this.picPlay.TabStop = false;
-            this.bunifuToolTip2.SetToolTip(this.picPlay, "");
-            this.bunifuToolTip1.SetToolTip(this.picPlay, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.picPlay, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.picPlay, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.picPlay, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.picPlay, "");
+            this.PlayPause.SetToolTip(this.picPlay, "");
+            this.PlayPause.SetToolTipIcon(this.picPlay, null);
+            this.PlayPause.SetToolTipTitle(this.picPlay, "");
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 302);
+            this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(7, 290);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(84, 25);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Tracks";
-            this.bunifuToolTip1.SetToolTip(this.label3, "");
-            this.bunifuToolTip2.SetToolTip(this.label3, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.label3, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.label3, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.label3, "");
-            this.bunifuToolTip2.SetToolTipTitle(this.label3, "");
+            this.label3.Text = "Playlist";
+            this.PlayPause.SetToolTip(this.label3, "");
+            this.PlayPause.SetToolTipIcon(this.label3, null);
+            this.PlayPause.SetToolTipTitle(this.label3, "");
             // 
             // bunifuSeparator1
             // 
@@ -900,12 +736,9 @@ namespace SoundCloud
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator1.Size = new System.Drawing.Size(300, 17);
             this.bunifuSeparator1.TabIndex = 6;
-            this.bunifuToolTip2.SetToolTip(this.bunifuSeparator1, "");
-            this.bunifuToolTip1.SetToolTip(this.bunifuSeparator1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.bunifuSeparator1, null);
-            this.bunifuToolTip2.SetToolTipIcon(this.bunifuSeparator1, null);
-            this.bunifuToolTip2.SetToolTipTitle(this.bunifuSeparator1, "");
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuSeparator1, "");
+            this.PlayPause.SetToolTip(this.bunifuSeparator1, "");
+            this.PlayPause.SetToolTipIcon(this.bunifuSeparator1, null);
+            this.PlayPause.SetToolTipTitle(this.bunifuSeparator1, "");
             // 
             // grid
             // 
@@ -961,12 +794,9 @@ namespace SoundCloud
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid.Size = new System.Drawing.Size(929, 244);
             this.grid.TabIndex = 7;
-            this.bunifuToolTip2.SetToolTip(this.grid, "");
-            this.bunifuToolTip1.SetToolTip(this.grid, "");
-            this.bunifuToolTip2.SetToolTipIcon(this.grid, null);
-            this.bunifuToolTip1.SetToolTipIcon(this.grid, null);
-            this.bunifuToolTip2.SetToolTipTitle(this.grid, "");
-            this.bunifuToolTip1.SetToolTipTitle(this.grid, "");
+            this.PlayPause.SetToolTip(this.grid, "");
+            this.PlayPause.SetToolTipIcon(this.grid, null);
+            this.PlayPause.SetToolTipTitle(this.grid, "");
             this.grid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellContentDoubleClick);
             this.grid.VisibleChanged += new System.EventHandler(this.grid_VisibleChanged);
             this.grid.DragDrop += new System.Windows.Forms.DragEventHandler(this.dataGridView1_DragDrop);
@@ -1011,75 +841,40 @@ namespace SoundCloud
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // bunifuToolTip1
+            // PlayPause
             // 
-            this.bunifuToolTip1.Active = true;
-            this.bunifuToolTip1.AlignTextWithTitle = false;
-            this.bunifuToolTip1.AllowAutoClose = false;
-            this.bunifuToolTip1.AllowFading = true;
-            this.bunifuToolTip1.AutoCloseDuration = 5000;
-            this.bunifuToolTip1.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuToolTip1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.bunifuToolTip1.ClickToShowDisplayControl = false;
-            this.bunifuToolTip1.ConvertNewlinesToBreakTags = true;
-            this.bunifuToolTip1.DisplayControl = null;
-            this.bunifuToolTip1.EntryAnimationSpeed = 350;
-            this.bunifuToolTip1.ExitAnimationSpeed = 200;
-            this.bunifuToolTip1.GenerateAutoCloseDuration = false;
-            this.bunifuToolTip1.IconMargin = 6;
-            this.bunifuToolTip1.InitialDelay = 0;
-            this.bunifuToolTip1.Name = "bunifuToolTip1";
-            this.bunifuToolTip1.Opacity = 1D;
-            this.bunifuToolTip1.OverrideToolTipTitles = false;
-            this.bunifuToolTip1.Padding = new System.Windows.Forms.Padding(10);
-            this.bunifuToolTip1.ReshowDelay = 100;
-            this.bunifuToolTip1.ShowAlways = true;
-            this.bunifuToolTip1.ShowBorders = false;
-            this.bunifuToolTip1.ShowIcons = true;
-            this.bunifuToolTip1.ShowShadows = true;
-            this.bunifuToolTip1.Tag = null;
-            this.bunifuToolTip1.TextFont = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuToolTip1.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuToolTip1.TextMargin = 2;
-            this.bunifuToolTip1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.Black;
-            this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
-            this.bunifuToolTip1.ToolTipTitle = null;
-            // 
-            // bunifuToolTip2
-            // 
-            this.bunifuToolTip2.Active = true;
-            this.bunifuToolTip2.AlignTextWithTitle = false;
-            this.bunifuToolTip2.AllowAutoClose = false;
-            this.bunifuToolTip2.AllowFading = true;
-            this.bunifuToolTip2.AutoCloseDuration = 5000;
-            this.bunifuToolTip2.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuToolTip2.BorderColor = System.Drawing.Color.Gainsboro;
-            this.bunifuToolTip2.ClickToShowDisplayControl = false;
-            this.bunifuToolTip2.ConvertNewlinesToBreakTags = true;
-            this.bunifuToolTip2.DisplayControl = null;
-            this.bunifuToolTip2.EntryAnimationSpeed = 350;
-            this.bunifuToolTip2.ExitAnimationSpeed = 200;
-            this.bunifuToolTip2.GenerateAutoCloseDuration = false;
-            this.bunifuToolTip2.IconMargin = 6;
-            this.bunifuToolTip2.InitialDelay = 0;
-            this.bunifuToolTip2.Name = "bunifuToolTip2";
-            this.bunifuToolTip2.Opacity = 1D;
-            this.bunifuToolTip2.OverrideToolTipTitles = false;
-            this.bunifuToolTip2.Padding = new System.Windows.Forms.Padding(10);
-            this.bunifuToolTip2.ReshowDelay = 100;
-            this.bunifuToolTip2.ShowAlways = true;
-            this.bunifuToolTip2.ShowBorders = false;
-            this.bunifuToolTip2.ShowIcons = true;
-            this.bunifuToolTip2.ShowShadows = true;
-            this.bunifuToolTip2.Tag = null;
-            this.bunifuToolTip2.TextFont = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuToolTip2.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuToolTip2.TextMargin = 2;
-            this.bunifuToolTip2.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuToolTip2.TitleForeColor = System.Drawing.Color.Black;
-            this.bunifuToolTip2.ToolTipPosition = new System.Drawing.Point(0, 0);
-            this.bunifuToolTip2.ToolTipTitle = null;
+            this.PlayPause.Active = true;
+            this.PlayPause.AlignTextWithTitle = false;
+            this.PlayPause.AllowAutoClose = false;
+            this.PlayPause.AllowFading = true;
+            this.PlayPause.AutoCloseDuration = 5000;
+            this.PlayPause.BackColor = System.Drawing.SystemColors.Control;
+            this.PlayPause.BorderColor = System.Drawing.Color.Gainsboro;
+            this.PlayPause.ClickToShowDisplayControl = false;
+            this.PlayPause.ConvertNewlinesToBreakTags = true;
+            this.PlayPause.DisplayControl = null;
+            this.PlayPause.EntryAnimationSpeed = 350;
+            this.PlayPause.ExitAnimationSpeed = 200;
+            this.PlayPause.GenerateAutoCloseDuration = false;
+            this.PlayPause.IconMargin = 6;
+            this.PlayPause.InitialDelay = 0;
+            this.PlayPause.Name = "PlayPause";
+            this.PlayPause.Opacity = 1D;
+            this.PlayPause.OverrideToolTipTitles = false;
+            this.PlayPause.Padding = new System.Windows.Forms.Padding(10);
+            this.PlayPause.ReshowDelay = 100;
+            this.PlayPause.ShowAlways = true;
+            this.PlayPause.ShowBorders = false;
+            this.PlayPause.ShowIcons = true;
+            this.PlayPause.ShowShadows = true;
+            this.PlayPause.Tag = null;
+            this.PlayPause.TextFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.PlayPause.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PlayPause.TextMargin = 2;
+            this.PlayPause.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.PlayPause.TitleForeColor = System.Drawing.Color.Black;
+            this.PlayPause.ToolTipPosition = new System.Drawing.Point(0, 0);
+            this.PlayPause.ToolTipTitle = null;
             // 
             // FrmMain
             // 
@@ -1127,7 +922,6 @@ namespace SoundCloud
         private System.Windows.Forms.PictureBox pictureBox3;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         private System.Windows.Forms.PictureBox picPlay;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private Bunifu.UI.WinForms.BunifuTextBox txtBusca;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Label label3;
@@ -1149,8 +943,7 @@ namespace SoundCloud
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Timer timer1;
         private Bunifu.UI.WinForms.BunifuHSlider vol;
-        private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
-        private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip2;
+        private Bunifu.UI.WinForms.BunifuToolTip PlayPause;
     }
 }
 
