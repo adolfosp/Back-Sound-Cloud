@@ -19,6 +19,7 @@ namespace SoundCloud
         {
             InitializeComponent();
             grid.Columns[0].DefaultCellStyle.NullValue = null;
+            grid.Rows.Clear();
         }
 
         private void btnMin_Click(object sender, EventArgs e)
@@ -137,13 +138,13 @@ namespace SoundCloud
             {
                 if (wavePlayer.PlaybackState == PlaybackState.Playing)
                 {
-                    wavePlayer.Pause();
                     btnPlayPause.Image = iconPlay.Image;
+                    wavePlayer.Pause();
                 }
                 else
                 {
-                    wavePlayer.Play();
                     btnPlayPause.Image = iconPause.Image;
+                    wavePlayer.Play();
                 }
 
             }
