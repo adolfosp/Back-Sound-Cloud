@@ -144,3 +144,4 @@ D:\MEGA\Projetos\SoundCloud\SoundCloud\bin\Debug\es\DevExpress.XtraBars.v20.2.re
 D:\MEGA\Projetos\SoundCloud\SoundCloud\bin\Debug\ja\DevExpress.XtraBars.v20.2.resources.dll
 D:\MEGA\Projetos\SoundCloud\SoundCloud\bin\Debug\ru\DevExpress.XtraBars.v20.2.resources.dll
 D:\MEGA\Projetos\SoundCloud\SoundCloud\obj\Debug\SoundCloud.Error.Base.resources
+D:\MEGA\Projetos\SoundCloud\SoundCloud\obj\Debug\SoundCloud.Mensagem.Aviso.resources

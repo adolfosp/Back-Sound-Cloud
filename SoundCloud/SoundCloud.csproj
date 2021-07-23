@@ -199,6 +199,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidade\InformacoesAdicionais.cs" />
     <Compile Include="Error\Base.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +212,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensagem\Aviso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mensagem\Aviso.Designer.cs">
+      <DependentUpon>Aviso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Error\Base.resx">
@@ -218,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensagem\Aviso.resx">
+      <DependentUpon>Aviso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 using Bunifu.UI.WinForms;
 using NAudio.Wave;
 using NAudio.WaveFormRenderer;
+using SoundCloud.Entidade;
 using SoundCloud.Error;
+using SoundCloud.Mensagem;
 
 namespace SoundCloud
 {
@@ -14,12 +18,13 @@ namespace SoundCloud
         private IWavePlayer wavePlayer = new WaveOutEvent();
         private AudioFileReader audioFileReader;
         private FileInfo file;
+        public IList<InformacoesAdicionais> informacoesAdicionais = new List<InformacoesAdicionais>();
+        public Boolean _botaoAdicionado = false;
 
         public FrmMain()
         {
             InitializeComponent();
             grid.Columns[0].DefaultCellStyle.NullValue = null;
-            grid.Rows.Clear();
         }
 
         private void btnMin_Click(object sender, EventArgs e)
@@ -40,6 +45,7 @@ namespace SoundCloud
 
         private void dataGridView1_DragDrop(object sender, DragEventArgs e)
         {
+
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
 
             foreach (string item in files)
@@ -56,9 +62,33 @@ namespace SoundCloud
 
                 });
 
+                informacoesAdicionais.Add(new InformacoesAdicionais { Extensao = fi.Extension, Tamanho = double.Parse((fi.Length/1000).ToString(@"#\,###", CultureInfo.InvariantCulture)) });
+
+               
                 grid.Rows[r].Tag = fi;
             }
 
+            if(_botaoAdicionado != true)
+                AdicionarColuna();
+
+
+
+
+
+        }
+
+        private void AdicionarColuna()
+        {
+            _botaoAdicionado = true;
+
+            grid.Columns.Add(new DataGridViewButtonColumn()
+            {
+                Text = "Ver",
+                UseColumnTextForButtonValue = true,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                HeaderText = "Informações Adicionais"
+                
+            });
 
 
         }
@@ -170,37 +200,48 @@ namespace SoundCloud
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(wavePlayer.PlaybackState == PlaybackState.Playing)
+            if (wavePlayer.PlaybackState == PlaybackState.Playing)
             {
                 lblMusica.Text = file.Name;
                 picPlay.Enabled = true;
                 SetSlider();
                 if (!lblArtista.Text.Contains("🤘"))
                 {
-                    lblArtista.Text = "Tocando agora 🤘🤘🤘";
+                    lblArtista.Text = "Tocando 🤘🤘🤘";
                 }
                 else if (lblArtista.Text.Contains("🤘🤘🤘"))
                 {
-                    lblArtista.Text = "Tocando agora 🤘🤘";
-                }else if (lblArtista.Text.Contains("🤘🤘"))
+                    lblArtista.Text = "Tocando 🤘🤘";
+                }
+                else if (lblArtista.Text.Contains("🤘🤘"))
                 {
-                    lblArtista.Text = "Tocando agora 🤘";
+                    lblArtista.Text = "Tocando 🤘";
                 }
                 else
                 {
-                    lblArtista.Text = "Tocando agora";
+                    lblArtista.Text = "Tocando";
                 }
 
             }
             else
             {
-                if(wavePlayer.PlaybackState == PlaybackState.Stopped)
+                if (wavePlayer.PlaybackState == PlaybackState.Stopped)
                 {
                     picWv.Width = 0;
                 }
                 lblMusica.Text = "Player inspirado no SoundCloud";
                 picPlay.Enabled = false;
-                lblArtista.Text = wavePlayer.PlaybackState.ToString();
+
+                switch (wavePlayer.PlaybackState.ToString())
+                {
+                    case "Paused":
+                      lblArtista.Text = "Pausado";
+                      break;
+                    case "Stopped":
+                        lblArtista.Text = "Parado";
+                        break;
+                }
+
             }
         }
 
@@ -216,12 +257,12 @@ namespace SoundCloud
 
         private void txtBusca_KeyUp(object sender, KeyEventArgs e)
         {
-            if(txtBusca.Text.Trim().Length != 0 || e.KeyCode == Keys.Enter)
+            if (txtBusca.Text.Trim().Length != 0 || e.KeyCode == Keys.Enter)
             {
                 var indice = 0;
                 foreach (DataGridViewRow item in grid.Rows)
                 {
-                    if (indice < grid.RowCount-1)
+                    if (indice < grid.RowCount)
                     {
                         item.Visible = grid.Rows[indice].Cells[1].Value.ToString().ToLower().Contains(txtBusca.Text.Trim().ToLower());
 
@@ -229,7 +270,7 @@ namespace SoundCloud
                     }
                 }
 
-               
+
             }
         }
 
@@ -310,41 +351,33 @@ namespace SoundCloud
         }
 
         private void bunifuHSlider1_Scroll(object sender, Utilities.BunifuSlider.BunifuHScrollBar.ScrollEventArgs e)
+
         {
-            try
+            var quantidadeDeLinhas = grid.RowCount;
+
+            if (quantidadeDeLinhas == 0)
+            {
+                var telaErro = new Base("Não é possível alterar o volume sem música adicionada!");
+                telaErro.Show();
+            }
+            else
             {
                 if (vol.Value != 0)
-                {
                     audioFileReader.Volume = wavePlayer.Volume = (vol.Value - 1) / 100f;
-                }
             }
-            catch(Exception ex)
-            {
-                var telaErro = new Base("Não é possível alterar o volume sem música");
-                telaErro.Show();
-              
-
-            }
-          
         }
-
 
         private void pnWaveForm_MouseUp(object sender, MouseEventArgs e)
         {
-            try
+           
+            if(audioFileReader != null)
             {
                 picWv.Width = e.X;
-               
+
                 var max = audioFileReader.Length;
                 var val = (e.X * max) / pnWaveForm.Width;
                 audioFileReader.Position = val;
-             
-
-            }
-            catch (Exception)
-            {
-
-            }
+            }       
         }
 
         private void picWv_MouseUp(object sender, MouseEventArgs e)
@@ -359,12 +392,24 @@ namespace SoundCloud
                 //audioFileReader.Position = picWv.Width;
 
                 picWv.Width = 0;
-                
+
             }
             catch (Exception)
             {
 
             }
+        }
+
+        private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(grid.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            {
+                var aviso = new Aviso();
+
+                aviso.Carrega(informacoesAdicionais[e.RowIndex].Extensao.ToString(), informacoesAdicionais[e.RowIndex].Tamanho);
+                aviso.Show();
+            }
+               
         }
     }
 }
