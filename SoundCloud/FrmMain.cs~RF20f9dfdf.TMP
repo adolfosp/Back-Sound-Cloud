@@ -1,15 +1,15 @@
-﻿using Bunifu.UI.WinForms;
-using NAudio.Wave;
-using NAudio.WaveFormRenderer;
-using SoundCloud.Entidade;
-using SoundCloud.Error;
-using SoundCloud.Mensagem;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
+using NAudio.Wave;
+using NAudio.WaveFormRenderer;
+using SoundCloud.Entidade;
+using SoundCloud.Error;
+using SoundCloud.Mensagem;
 
 namespace SoundCloud
 {
@@ -20,6 +20,7 @@ namespace SoundCloud
         private FileInfo file;
         public IList<InformacoesAdicionais> informacoesAdicionais = new List<InformacoesAdicionais>();
         public bool _botaoAdicionado = false;
+        public bool _telaProgressoAtiva = false;
 
         public FrmMain()
         {
@@ -28,18 +29,20 @@ namespace SoundCloud
         }
 
         private void btnMin_Click(object sender, EventArgs e)
-            => bunifuFormDock1.WindowState = BunifuFormDock.FormWindowStates.Minimized;
-        
+        {
+
+            bunifuFormDock1.WindowState = BunifuFormDock.FormWindowStates.Minimized;
+        }
 
         private void btnFechar_Click(object sender, EventArgs e)
-            => this.Close();
-
+        {
+            this.Close();
+        }
 
         private void dataGridView1_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop)) e.Effect = DragDropEffects.Copy;
         }
-
 
         private void dataGridView1_DragDrop(object sender, DragEventArgs e)
         {
@@ -62,11 +65,17 @@ namespace SoundCloud
 
                 informacoesAdicionais.Add(new InformacoesAdicionais { Extensao = fi.Extension, Tamanho = double.Parse((fi.Length / 1000).ToString(@"#\,###", CultureInfo.InvariantCulture)) });
 
+
                 grid.Rows[r].Tag = fi;
             }
 
             if (_botaoAdicionado != true)
                 AdicionarColuna();
+
+
+
+
+
         }
 
         private void AdicionarColuna()
@@ -82,6 +91,7 @@ namespace SoundCloud
 
             });
 
+
         }
 
         private void grid_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -89,7 +99,6 @@ namespace SoundCloud
 
             if (e.RowIndex < 0) return;
             file = ((FileInfo)grid.Rows[e.RowIndex].Tag);
-            MudarImagemBotaoPlayer();
             Play();
         }
 
@@ -156,10 +165,6 @@ namespace SoundCloud
         }
 
         private void btnPlayPause_Click(object sender, EventArgs e)
-            => MudarImagemBotaoPlayer();
-
-
-        public void MudarImagemBotaoPlayer()
         {
             try
             {
@@ -193,6 +198,7 @@ namespace SoundCloud
 
             }
         }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -265,16 +271,20 @@ namespace SoundCloud
                         indice++;
                     }
                 }
+
+
             }
         }
 
         private void btnPlaylist_Click(object sender, EventArgs e)
-            => grid.Visible = !grid.Visible;
-
+        {
+            grid.Visible = !grid.Visible;
+        }
 
         private void grid_VisibleChanged(object sender, EventArgs e)
-           => this.Height = grid.Visible ? 695 : 340;
-
+        {
+            this.Height = grid.Visible ? 695 : 340;
+        }
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
@@ -291,9 +301,9 @@ namespace SoundCloud
                 file = ((FileInfo)grid.CurrentRow.Tag);
                 Play();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                new Base($"Ocorreu um erro ao executar a operação!{Environment.NewLine}Mensagem: {ex.Message}");
+
             }
         }
 
@@ -312,9 +322,9 @@ namespace SoundCloud
                 file = ((FileInfo)grid.CurrentRow.Tag);
                 Play();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                new Base($"Ocorreu um erro ao executar a operação!{Environment.NewLine}Mensagem: {ex.Message}");
+
             }
         }
 
@@ -324,9 +334,9 @@ namespace SoundCloud
             {
                 wavePlayer.Stop();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                new Base($"Ocorreu um erro ao executar a operação!{Environment.NewLine}Mensagem: {ex.Message}");
+
             }
         }
 
@@ -336,9 +346,9 @@ namespace SoundCloud
             {
                 audioFileReader.Position = 0;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                new Base($"Ocorreu um erro ao executar a operação!{Environment.NewLine}Mensagem: {ex.Message}");
+
             }
         }
 
@@ -377,12 +387,17 @@ namespace SoundCloud
             try
             {
 
+                //picWv.Width = e.X;
+                //var max = audioFileReader.Length;
+                //var val = (e.X * max) / picWv.Width;
+
+                //audioFileReader.Position = picWv.Width;
+
                 picWv.Width = 0;
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                new Base($"Ocorreu um erro ao executar a operação!{Environment.NewLine}Mensagem: {ex.Message}");
 
             }
         }
